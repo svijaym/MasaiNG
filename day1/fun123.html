@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AngularIntro</title>
+    <script>
+      function fun1() {
+        console.log("f1");
+        document.getElementsByTagName("h1")[0].innerText =
+          "Welcome to Angular,fun1 demonstration";
+      }
+      function fun2() {
+        console.log("f2");
+        document.getElementsByTagName("h1")[0].innerText =
+          "Welcome to Angular,fun2 demonstration";
+      }
+      function fun3() {
+        console.log("f3");
+        document.getElementsByTagName("h1")[0].innerText =
+          "Welcome to Angular,fun3 demonstration";
+      }
+      window.onload = fun1;
+      window.addEventListener("load", fun2);
+      document.addEventListener("DOMContentLoaded", fun3);
+    </script>
+  </head>
+
+  <body>
+    <h1></h1>
+    <h2>
+      fun3 will be exutes first, then fun1, fun2 so we will seeing fun2 details
+      on screen
+    </h2>
+  </body>
 </html>
